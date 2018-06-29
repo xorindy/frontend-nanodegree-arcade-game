@@ -12,16 +12,15 @@ class Entity {
 
 }
 
-// Create Player class
-class Player extends Entity {
-    constructor() {
+// Create Enemy class
+class Enemy extends Entity {
+    constructor(x, y) {
         super();
-        this.sprite += 'char-boy.png';
+        this.sprite += 'enemy-bug.png';
+        this.x = x;
+        this.y = y;
     }
 }
-
-const player = new Player();
-
 
 // Enemies our player must avoid
 var Enemy = function() {
@@ -49,6 +48,15 @@ Enemy.prototype.render = function() {
 
 
 // Now write your own player class
+class Player extends Entity {
+    constructor() {
+        super();
+        this.sprite += 'char-boy.png';
+    }
+}
+
+const player = new Player();
+
 // This class requires an update(), render() and
 // a handleInput() method.
 
