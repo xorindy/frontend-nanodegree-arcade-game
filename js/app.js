@@ -1,16 +1,27 @@
 // Create entity class
-  class Entity {
+class Entity {
     constructor() {
-       this.sprite = 'images/';
-      this.x = 2;
-      this.y = 5;
+        this.sprite = 'images/';
+        this.x = 2;
+        this.y = 5;
     }
 
     render() {
-      ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+        ctx.drawImage(Resources.get(this.sprite), this.x * 101, this.y * 83);
     }
 
-  }
+}
+
+// Create Player class
+class Player extends Entity {
+    constructor() {
+        super();
+        this.sprite += 'char-boy.png';
+    }
+}
+
+const player = new Player();
+
 
 // Enemies our player must avoid
 var Enemy = function() {
@@ -34,6 +45,8 @@ Enemy.prototype.update = function(dt) {
 Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
+
+
 
 // Now write your own player class
 // This class requires an update(), render() and
