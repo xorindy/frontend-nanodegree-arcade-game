@@ -1,3 +1,17 @@
+// Create entity class
+  class Entity {
+    constructor() {
+       this.sprite = 'images/';
+      this.x = 2;
+      this.y = 5;
+    }
+
+    render() {
+      ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+    }
+
+  }
+
 // Enemies our player must avoid
 var Enemy = function() {
     // Variables applied to each of our instances go here,
