@@ -7,7 +7,7 @@ class Entity {
     }
 
     // Update the sprites
-    update() {
+    update(dt) {
         this.isOffScreenX = this.x > 5;
         this.isOffScreenY = this.y < 1;
     }
@@ -26,6 +26,16 @@ class Enemy extends Entity {
         this.sprite += 'enemy-bug.png';
         this.x = x;
         this.y = y;
+    }
+
+    update(dt) {
+        super.update();
+        if(this.isOffScreenX){
+            this.x = -1;
+        }
+        else {
+            this.x += dt;
+        }
     }
 }
 
