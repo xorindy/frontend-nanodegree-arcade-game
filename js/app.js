@@ -14,7 +14,7 @@ class Entity {
 
     // Draws the entity on the board
     render() {
-        ctx.drawImage(Resources.get(this.sprite), this.x * 101, this.y * 83);
+        ctx.drawImage(Resources.get(this.sprite), this.x * 101, this.y * 78);
     }
 
 }
@@ -77,7 +77,7 @@ class Player extends Entity {
 
 // Place all enemy objects in an array called allEnemies
 //Create an array of three enemies
-const allEnemies = [...Array(3)].map((_,i)=> new Enemy(0,i+1));
+const allEnemies = [...Array(4)].map((_,i)=> new Enemy(0,i+1));
 
 // Place the player object in a variable called player
 const player = new Player();
