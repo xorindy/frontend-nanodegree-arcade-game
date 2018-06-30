@@ -5,6 +5,13 @@ class Entity {
         this.x = 2;
         this.y = 5;
     }
+
+    // Update the sprites
+    update() {
+        this.isOffScreenX = this.x > 5;
+        this.isOffScreenY = this.y < 1;
+    }
+
     // Draws the entity on the board
     render() {
         ctx.drawImage(Resources.get(this.sprite), this.x * 101, this.y * 83);
