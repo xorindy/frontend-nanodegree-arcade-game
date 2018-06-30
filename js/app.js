@@ -57,6 +57,8 @@ class Player extends Entity {
     constructor() {
         super();
         this.sprite += 'char-boy.png';
+        this.moving = false;
+        this.win = false;
     }
 
     // Move players around the board
@@ -78,6 +80,21 @@ class Player extends Entity {
             default:
                 break;
         }
+        this.moving = true; //player is moving
+    }
+
+    // Check for player victory
+    update(dt) {
+        super.update();
+        if (this.isOffScreenY && !this.moving && !this.win) {
+            alert('Victory!');
+            this.win = true;
+        }
+    }
+
+    render() {
+        super.render();
+        this.moving = false;
     }
 }
 
