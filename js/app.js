@@ -6,15 +6,27 @@ class Entity {
         this.y = 5;
     }
 
-    // Update the sprites
+    // Check to see if sprites are off the board
     update(dt) {
         this.isOffScreenX = this.x > 5;
         this.isOffScreenY = this.y < 1;
     }
 
-    // Draws the entity on the board
+    // Draws the sprites on the board
     render() {
         ctx.drawImage(Resources.get(this.sprite), this.x * 101, this.y * 78);
+    }
+
+    // Check to see if player or enemy collided
+    checkCollisions(playerOrEnemy) {
+        if (this.y === playerOrEnemy.y) {
+            if (this.x >= playerOrEnemy.x - 0.75 && this.x <= playerOrEnemy.x + 0.75) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
     }
 
 }
@@ -40,18 +52,17 @@ class Enemy extends Entity {
 }
 
 
-// Now write your own player class
-// This class requires an update(), render() and
-// a handleInput() method.
+// Player class
 class Player extends Entity {
     constructor() {
         super();
         this.sprite += 'char-boy.png';
     }
 
+    // Move players around the board
     handleInput(input) {
         switch (input) {
-            //Set boundaries for player movement
+            // Set boundaries for player movement
             case 'left':
                 this.x = this.x > 0 ? this.x - 1 : this.x;
                 break;
