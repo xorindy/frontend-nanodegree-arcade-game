@@ -100,13 +100,9 @@ class Player extends Entity {
 }
 
 
-
-
-// Now instantiate your objects.
-
 // Place all enemy objects in an array called allEnemies
-//Create an array of four enemies
-const allEnemies = [...Array(4)].map((_,i)=> new Enemy(0,i+1,Math.floor((Math.random() * 7) + 1)));
+//Create an array of six enemies
+const allEnemies = [...Array(6)].map((_,i)=> new Enemy(0,Math.floor((Math.random() * 4) + 1),Math.floor((Math.random() * 7) + 1)));
 
 // Place the player object in a variable called player
 const player = new Player();
