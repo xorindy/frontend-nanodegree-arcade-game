@@ -33,11 +33,12 @@ class Entity {
 
 // Create Enemy class
 class Enemy extends Entity {
-    constructor(x, y) {
+    constructor(x, y, speed) {
         super();
         this.sprite += 'enemy-bug.png';
         this.x = x;
         this.y = y;
+        this.speed = speed;
     }
 
     update(dt) {
@@ -46,7 +47,7 @@ class Enemy extends Entity {
             this.x = -1;
         }
         else {
-            this.x += dt;
+            this.x += this.speed * dt;
         }
     }
 }
@@ -104,8 +105,8 @@ class Player extends Entity {
 // Now instantiate your objects.
 
 // Place all enemy objects in an array called allEnemies
-//Create an array of three enemies
-const allEnemies = [...Array(4)].map((_,i)=> new Enemy(0,i+1));
+//Create an array of four enemies
+const allEnemies = [...Array(4)].map((_,i)=> new Enemy(0,i+1,Math.floor((Math.random() * 7) + 1)));
 
 // Place the player object in a variable called player
 const player = new Player();
