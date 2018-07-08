@@ -52,8 +52,7 @@ class Enemy extends Entity {
     }
 }
 
-
-// Player class
+// Create Player class
 class Player extends Entity {
     constructor() {
         super();
@@ -88,8 +87,12 @@ class Player extends Entity {
     update(dt) {
         super.update();
         if (this.isOffScreenY && !this.moving && !this.win) {
-            alert('Victory!');
             this.win = true;
+            this.x = 2;
+            this.y = 5;
+            alert('Victory!');
+        } else {
+            this.win = false;
         }
     }
 
