@@ -88,9 +88,9 @@ class Player extends Entity {
         super.update();
         if (this.isOffScreenY && !this.moving && !this.win) {
             this.win = true;
-            this.x = 2;
-            this.y = 5;
-            alert('Victory!');
+            alert('Congratulations! You won!');
+            restart();
+
         } else {
             this.win = false;
         }
@@ -102,10 +102,36 @@ class Player extends Entity {
     }
 }
 
+//Reset player
+function restart() {
+    player.x = 2;
+    player.y = 5;
+
+    clearEnemies();
+    spawnEnemies();
+};
 
 // Place all enemy objects in an array called allEnemies
-//Create an array of six enemies
-const allEnemies = [...Array(6)].map((_,i)=> new Enemy(0,Math.floor((Math.random() * 4) + 1),Math.floor((Math.random() * 7) + 1)));
+let allEnemies = [];
+spawnEnemies();
+
+//Spawning six enemies
+function spawnEnemies() {
+    //Create an array of six enemies
+    for (var i=0; i < 6; i++){
+        var x = 0;
+        var y = Math.floor((Math.random() * 4) + 1);
+        var speed = Math.floor((Math.random() * 7) + 1);
+        allEnemies.push(new Enemy(x, y, speed));
+    }
+};
+
+//Clear the allEnemies array
+function clearEnemies() {
+    for (var i=0; i < 6; i++){
+        allEnemies.pop();
+    }
+};
 
 // Place the player object in a variable called player
 const player = new Player();
