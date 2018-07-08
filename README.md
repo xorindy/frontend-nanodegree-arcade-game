@@ -1,6 +1,30 @@
-frontend-nanodegree-arcade-game
+Project #3: Frontend Nanodegree Arcade Game
 ===============================
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+A simple frogger clone arcade game to practice Object-Oriented Programming with Javascript. Art assets and game engine have been provided by Udacity.
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+![snippet](https://image.ibb.co/d1axro/frogger.png)
+
+## Installation:
+    1. Download from github (click the green button "Clone or Download").
+    2. Click "Download ZIP" and extract the zip to your computer (You may opt to clone the repository on github).
+    3. Navigate extracted files or cloned repository directory in your computer.
+    4. Double-click index.html to open the game on your browser.
+
+## How To Play:
+    Use arrow keys to move your player from the grass to the water. Avoid touching any bugs rushing past. To win the game you must reach the water. If you touch any of the bugs the game will reset.
+
+## Built Using:
+    - HTML5
+    - CSS
+    - JavaScript
+
+## References:
+
+[Another Frogger Arcade Game](https://github.com/imerx/Udacity-P3-Frogger-Arcade-Game)
+
+[Game and Player Set-Up](https://zoom.us/recording/play/aulotDlzKFegQFIJTaTzKgWvNkVsYtlwO454vL1UPE1Cm6lOUBQCtfVurPOIAGAS?startTime=1529542978000)
+
+[Styling My Button](https://www.w3schools.com/css/css3_buttons.asp)
+
+[Git Hub README Syntax](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
