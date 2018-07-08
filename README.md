@@ -12,7 +12,10 @@ A simple frogger clone arcade game to practice Object-Oriented Programming with 
     4. Double-click index.html to open the game on your browser.
 
 ## How To Play:
-    Use arrow keys to move your player from the grass to the water. Avoid touching any bugs rushing past. To win the game you must reach the water. If you touch any of the bugs the game will reset.
+    - Use arrow keys to move your player from the grass to the water. 
+    - Avoid touching any bugs rushing past. 
+    - To win the game you must reach the water. 
+    - If you touch any of the bugs the game will reset.
 
 ## Built Using:
     - HTML5
