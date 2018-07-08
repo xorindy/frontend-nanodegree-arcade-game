@@ -117,8 +117,8 @@ spawnEnemies();
 
 //Spawning six enemies
 function spawnEnemies() {
-    //Create an array of six enemies
-    for (var i=0; i < 6; i++){
+    //Create an array of enemies
+    for (var i=0; i < 5; i++){
         var x = 0;
         var y = Math.floor((Math.random() * 4) + 1);
         var speed = Math.floor((Math.random() * 7) + 1);
@@ -128,7 +128,7 @@ function spawnEnemies() {
 
 //Clear the allEnemies array
 function clearEnemies() {
-    for (var i=0; i < 6; i++){
+    for (var i=0; i < 5; i++){
         allEnemies.pop();
     }
 };
@@ -149,3 +149,4 @@ document.addEventListener('keyup', function(e) {
 
     player.handleInput(allowedKeys[e.keyCode]);
 });
+
